@@ -1,0 +1,349 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
+
+
+*{
+    box-sizing: border-box;
+    font-family: "Ubuntu";
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: #3b3d43;
+}
+button{
+    border: 0;
+    padding: 0;
+    font-family: inherit;
+    background: transparent;
+    cursor: pointer;
+    width: 100%;
+    height: 64px;
+    padding: 10px;
+    font-size: 25px;
+}
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 64px;
+    background: #5656ae;
+    color: #f9f9f9;
+    font-family: inherit;
+    flex-wrap:nowrap !important;
+
+}
+.navbar-overlay{
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(13, 12, 12, 0.348);
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+}
+body.open .navbar-overlay{
+    opacity: 1;
+    visibility: visible;
+}
+.navbar-burger{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: grid;
+    place-items: center;
+    width: 64px;
+    height: 64px;
+    padding: 0;
+    color: #f9f9f9;
+}
+.navbar-burger span{
+    font-size: 24px;
+}
+.navbar-title{
+    margin: 0;
+    font-size: 24px;
+    font-family: inherit;
+    visibility: hidden;
+}
+.navbar-menu{
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    translate: -100% 0;
+    height: 100%;
+    display: flex;
+    gap: 6px;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #000;
+    visibility: hidden;
+    transition: all 0.3s;
+    text-align: center;
+}
+body.open .navbar-menu{
+    translate: 0 0;
+    visibility: visible;
+}
+.navbar-menu>button{
+    color:rgba(255, 255, 255, 0.5);
+    background-color: transparent;
+    padding: 0 8px;
+    transition: all 0.3s;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+
+}
+.navbar-menu>button.active{
+    color: inherit;
+}
+
+.navbar-menu>button.active:hover{
+    color: #B2B8DF;
+}
+
+/*Footer*/
+.footer-dark {
+    padding:50px 0;
+    color:#f0f9ff;
+    background-color:#5656AE;
+    font-family: inherit;
+  }
+  
+  .footer-dark h3 {
+    margin-top:0;
+    margin-bottom:12px;
+    font-weight:bold;
+    font-size:16px;
+  }
+  
+  .footer-dark ul {
+    padding:0;
+    list-style:none;
+    line-height:1.6;
+    font-size:14px;
+    margin-bottom:0;
+  }
+  
+  .footer-dark ul a {
+    color:inherit;
+    text-decoration:none;
+    opacity:0.6;
+  }
+  
+  .footer-dark ul a:hover {
+    opacity:0.8;
+  }
+  
+  @media (max-width:767px) {
+    .footer-dark .item:not(.social) {
+      text-align:center;
+      padding-bottom:20px;
+    }
+  }
+  
+  .footer-dark .item.text {
+    margin-bottom:36px;
+  }
+  
+  @media (max-width:767px) {
+    .footer-dark .item.text {
+      margin-bottom:0;
+    }
+  }
+  
+  .footer-dark .item.text p {
+    opacity:0.6;
+    margin-bottom:0;
+  }
+  
+  .footer-dark .item.social {
+    text-align:center;
+  }
+  
+  @media (max-width:991px) {
+    .footer-dark .item.social {
+      text-align:center;
+      margin-top:20px;
+    }
+  }
+  
+  .footer-dark .item.social > a {
+    font-size:20px;
+    width:36px;
+    height:36px;
+    line-height:36px;
+    display:inline-block;
+    text-align:center;
+    border-radius:50%;
+    box-shadow:0 0 0 1px rgba(255,255,255,0.4);
+    margin:0 8px;
+    color:#fff;
+    opacity:0.75;
+  }
+  
+  .footer-dark .item.social > a:hover {
+    opacity:0.9;
+  }
+  
+  .footer-dark .copyright {
+    text-align:center;
+    padding-top:24px;
+    opacity:0.3;
+    font-size:13px;
+    margin-bottom:0;
+  }
+  
+/*Yazı kartları*/
+.article{
+    border-radius: 12px;
+    border: 1px solid #e8e8e8;
+    margin-bottom: 7px;
+    padding: 10 12px;
+    width: auto;
+    background-color: #ffffff;
+
+    
+}
+.listo .header.list-name{
+    white-space: pre-line;
+    word-wrap: break-word;
+
+}
+.lister list detail sub-list{
+    clear: both;
+    background-color: inherit;
+}
+.lister-list{
+    display: inline;
+    width: 100%;
+    margin: 16px 16px;
+
+}
+.text-small{
+    font-size: 70%;
+}
+
+.lister-item>mode-detail{
+    background-color: green;
+    padding: 10px 10px 20px;
+}
+
+.lister-item-image .ribbonize{
+    background-color: pink;
+    position: relative;
+    
+}
+.lister-item.mode-detail>.lister-item-image{
+    display: inline-block;
+    margin-right: 15px;
+    vertical-align: top;
+    place-self: center;
+}
+
+.wl-ribbon poster retina not-inWL{
+    background-position:-44px 0;
+}
+p{
+    padding: 4px 4px;
+    font-size: 10px;
+}
+
+
+.lister-item.mode-detail>.lister-item-content
+{
+    display: inline-block;
+    width: 72%;
+}
+
+
+.article h1{
+padding: 0.5em;
+}
+
+
+.lister-item-image{
+    position: relative;
+}
+
+.wl-ribbon.poster.not-inWL, .wl-ribbon.poster.retina.not-inWL{
+    background-position:-44px 0;
+}
+.wl-ribbon.poster, .wl-ribbon.poster.retina{
+    background-image: url(https://m.media-amazon.com/images/S/sash/732C-8zJzQ9xx1C.png);
+    height: 38px;
+    left: 2px;
+    top: 0;
+    width: 38px;
+}
+.wl-ribbon.poster{
+    position: absolute;
+}
+.wl-ribbon.poster:hover{
+    opacity: 0.7;
+}
+.lister{
+    padding: 0;
+    position: relative;
+}
+.lister-item.mode-detail{
+    display: flex;
+    margin-bottom: 3px;
+    pad: 10px 10px 20px;
+    background-color: #F6F6F5;
+}
+img{
+    vertical-align: center;
+}
+@media only screen and (min-width: 600px){
+    .navbar{
+    justify-content: space-between;
+    padding: 0 0 0 16px;
+    }
+    .button{
+        width: 64px;
+        height: 64px;
+    }
+    .navbar-overlay{
+        
+    display: none;
+    }
+    .navbar-burger
+    { display: none;
+     
+    }
+    .navbar-menu{
+    position: static;
+    align-items: center;
+    translate: 0 0;
+    width: auto;
+    background: transparent;
+    flex-direction: row;
+    visibility: visible;
+    }
+    .navbar-menu>button.active:hover{
+        color: #B0B5DD;
+    }
+    .navbar-title{
+       
+        visibility: visible;
+    }
+    p{
+      
+        font-size: 16px;
+    }
+
+    }
+
+
+
